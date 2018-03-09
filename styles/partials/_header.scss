@@ -1,0 +1,52 @@
+header {
+    height: 100vh;
+    background: url(../images/patrick-hendry-249303-unsplash.jpg);
+    background-size: cover;
+    color: $tertiary;
+    
+    .wrapper {
+        @include flexRow;
+        align-items: center;
+    }
+}
+
+nav {
+    @include flexCol;
+     h1 {
+        font-size: 50px;
+        width: 20%;
+        padding: 20px 0;
+    }
+    h2 {
+        font-size: 15px;
+        padding-bottom: 15px;
+        color: $tertiary;
+    }
+
+    ul {
+        @include flexRow;
+        border-bottom: 5px solid $accent;
+        li {
+            font-size: 15px;
+            background: $accent;
+            width: 100px;
+            height: 100px;
+            margin-right: 20px;
+            @include flexRow;
+            justify-content: center;
+            align-items: center;
+        }
+        li:last-of-type {
+            margin-right: 0;
+        }
+    }
+}
+
+nav ul li:nth-of-type(2n) {
+    background: $mainAccent;
+}
+
+nav ul li:first-of-type, nav ul li:nth-of-type(3) {
+    background: $accent;
+}
+

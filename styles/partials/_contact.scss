@@ -1,0 +1,90 @@
+.contact {
+    background: $main;
+    .wrapper {
+        @include flexRow;
+        justify-content: space-between;
+        align-items: center;
+        h2 {
+            color: $tertiary;
+            font-family: $open-sans;
+        }
+        h3 {
+            color: $tertiary;
+            font-size: 15px;
+        }
+        p {
+            font-weight: 300;
+        }
+        span {
+            color: $accent;
+            margin-right: 20px;
+            display: inline-block;
+            width: 70px;
+            font-weight: 400;
+        }
+
+    }
+}
+
+form {
+    @include flexCol;
+    input, textarea {
+        margin-bottom: 10px;
+        border-radius: 1%;
+        border: none;
+    }
+    input {
+        height: 30px;
+    }
+
+    textarea {
+        height: 200px;
+    }
+
+    button {
+        background: $accent;
+        align-self: flex-end;
+    }
+    label {
+       display: none;
+    }
+}
+
+.contact__links {
+    color: $tertiary;
+    align-self: flex-start;
+     ul {
+    @include flexRow;
+        li {
+            a {
+                color: $tertiary;
+            }
+            margin-right: 30px;
+            font-size: 20px;
+        }
+    }
+    h2 {
+        margin-top: 40px;
+    }
+    h3 {
+        margin: 10px 0 30px 0;
+    }
+    p {
+        margin: 10px 0;
+        span {
+            margin-right: 5px;
+        }
+    }
+}
+
+.contact__form {
+    width: 50%;
+}
+
+::placeholder {
+    font-family: $open-sans;
+    font-weight: 400;
+    color: $mainAccent;
+    font-size: 12px;
+    padding: 10px;
+}

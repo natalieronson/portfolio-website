@@ -1,0 +1,17 @@
+.aboutMe .wrapper {
+    @include flexRow;
+    align-items: center;
+    .aboutMe__image {
+        flex-basis: 50%;
+    }
+    .aboutMe__bio {
+        flex-basis: 50%;
+    }
+}
+.aboutMe__image img {
+    height: 300px;
+    width: 200px;
+    border-radius: 3%;
+    border: 3px solid $accent;
+}
+

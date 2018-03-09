@@ -1,0 +1,31 @@
+footer {
+    background: $main;
+    color: $tertiary;
+    border-top: 1px solid $tertiary;
+    .wrapper {
+        min-height: 10vh;
+        @include flexCol;
+        justify-content: center;
+        align-items: center;
+        span {
+            margin-right: 3px;
+        }
+        p {
+            font-size: 12px;
+            margin: 5px 0;
+            font-weight: 300;
+        }
+    }
+} 
+
+.footer__content {
+    @include flexRow;
+    p {
+        padding: 0 20px;
+    }
+}
+
+.contact__links ul {
+    margin: 60px 0;
+}
+

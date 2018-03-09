@@ -1,0 +1,71 @@
+$accent: #ff4e57;
+$mainAccent: #292929;
+$main: #000000;
+$tertiary: #ffffff;
+$backgroundAccent: #f9f9f9;
+
+$open-sans: 'Open Sans', sans-serif;
+$montserrat: 'Montserrat', sans-serif;
+
+@mixin flexRow {
+    display: flex;
+    flex-direction: row;
+}
+
+@mixin flexCol {
+    display: flex;
+    flex-direction: column;
+}
+
+@import 'partials/normalize';
+@import 'partials/header';
+@import 'partials/about';
+@import 'partials/skills';
+@import 'partials/portfolio';
+@import 'partials/contact';
+@import 'partials/footer';
+
+.wrapper {
+    width: 700px;
+    margin: 0 auto;
+    min-height: 100vh;
+}
+
+h1, h2, h3, li {
+    font-family: $montserrat;
+    font-weight: 400;
+}
+
+p {
+    font-family: $open-sans;
+    font-weight: 400;
+}
+
+ul li {
+    list-style-type: none;
+}
+
+h2 {
+    color: $accent;
+    margin: 20px 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+        width: 100px;
+        height: 30px;
+        border-radius: 20px;
+        border: none;
+        background: $main;
+        color: $tertiary;
+        font-size: 15px;
+        font-family: $open-sans;
+        font-weight: 400;
+}
+
+
+
+

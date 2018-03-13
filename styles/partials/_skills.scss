@@ -1,47 +1,87 @@
+.skills {
+    background-attachment: fixed;
+    background-position: center center;
+}
+
 .skills .wrapper {
     @include flexRow;
     flex-wrap: wrap;
+    margin-bottom: 100px;
     p {
         text-transform: uppercase;
         font-family: $montserrat;
-        font-weight: 400;
+        font-weight: 600;
         font-size: 15px;
+        text-align: center;
     }
     h2 {
         width: 100%;
+        color: $accent;
     }
 }
 
-.skills__skill {
+.skills__item {
     @include flexCol;
     justify-content: center;
     align-items: center;
-    height: 200px;
-    width: 200px;
+    height: 100px;
+    width: 100px;
+    box-shadow: 1px 1px 3px grey;
     background: darken($backgroundAccent, 3%);
-    margin: 20px 20px 20px 0;
-    .skills__icon {
+    margin: 20px;
+}
+
+.skills__icon {
         @include flexRow;
         justify-content: center;
         align-items: center;
-        background: $accent;
-        height: 50px;
-        width: 50px;
-        border-radius: 50%;
-        margin-bottom: 10px;
+        // background: $accent;
+        // background: darken($backgroundAccent, 50%);
+        background: $backgroundAccent;
+        // background: white;
+        height: 100px;
+        width: 100px;
+        // border-radius: 50%;
         i {
-            font-size: 30px;
-            color: $tertiary;
+            font-size: 50px;
+            color: $main;
         }
-    }
 }
 
-.skills__skill--wrapper {
-    @include flexCol;
-    justify-content: center;
-    align-items: center;
-    height: 200px;
-    width: 200px;
-    background: $tertiary;
-    border-radius: 50%;
-}
+// .skills__skill {
+//     @include flexCol;
+//     justify-content: center;
+//     align-items: center;
+//     height: 100px;
+//     width: 100px;
+//     box-shadow: 1px 1px 3px grey;
+//     // background: darken($backgroundAccent, 3%);
+//     background: darken($backgroundAccent, 20%);
+//     // background: $accent;
+//     margin: 20px 20px 20px 0;
+//     .skills__icon {
+//         @include flexRow;
+//         justify-content: center;
+//         align-items: center;
+//         // background: $accent;
+//         background: darken($backgroundAccent, 50%);
+//         height: 50px;
+//         width: 50px;
+//         border-radius: 50%;
+//         // margin-bottom: 10px;
+//         i {
+//             font-size: 30px;
+//             color: $tertiary;
+//         }
+//     }
+// }
+
+// .skills__skill--wrapper {
+//     @include flexCol;
+//     justify-content: center;
+//     align-items: center;
+//     height: 100px;
+//     width: 100px;
+//     background: $tertiary;
+//     border-radius: 50%;
+// }

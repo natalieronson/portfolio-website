@@ -1,6 +1,8 @@
 $accent: #ff4e57;
 $mainAccent: #292929;
-$main: #000000;
+
+// $main: #000000;
+$main: rgba(7, 5, 15, 0.897);
 $tertiary: #ffffff;
 $backgroundAccent: #f9f9f9;
 
@@ -25,6 +27,13 @@ $montserrat: 'Montserrat', sans-serif;
 @import 'partials/contact';
 @import 'partials/footer';
 
+body {
+    height: 100%;
+    @include flexCol;
+    // align-items: center;
+    // width: 100%;
+}
+
 .wrapper {
     width: 700px;
     margin: 0 auto;
@@ -39,6 +48,7 @@ h1, h2, h3, li {
 p {
     font-family: $open-sans;
     font-weight: 400;
+    color: $mainAccent;
 }
 
 ul li {
@@ -48,24 +58,40 @@ ul li {
 h2 {
     color: $accent;
     margin: 20px 0;
+    text-transform: uppercase;
+    font-weight: 600;
 }
 
 a {
     text-decoration: none;
 }
 
-button {
+button, input[type='submit'] {
         width: 100px;
         height: 30px;
         border-radius: 20px;
         border: none;
         background: $main;
         color: $tertiary;
-        font-size: 15px;
+        font-size: 13px;
         font-family: $open-sans;
         font-weight: 400;
 }
 
+.break {
+    height: 50px;
+    width: 200px;
+    margin-bottom: 50px;
+}
 
+label {
+    display: none;
+}
+
+::placeholder {
+    color: white;
+    font-family: $open-sans;
+    font-size: 13px;
+}
 
 

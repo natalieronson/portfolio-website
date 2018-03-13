@@ -6,129 +6,53 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Natalie Ronson</title>
 	<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+	<link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
-	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700|Open+Sans:300,400,600,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700|Open+Sans:300,400,600,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Catamaran" rel="stylesheet">
 	<link rel="stylesheet" href="styles/styles.css">
 </head>
-<body>
-	<header>
+<body>	
+	<header class="headerTwo">
 		<div class="wrapper">
 			<nav>
-				<h1>Natalie Ronson</h1>
-				<h2>Web Developer</h2>
-				<ul>
-					<li>About me</li>
-					<li>Skills</li>
-					<li>Portfolio</li>
-					<li>Contact</li>
+				<ul class="nav__links">
+					<li><a href="#aboutMe" class="about__button">About</a></li>
+					<li><a href="#portfolio">Portfolio</a></li>
+					<li><a href="#skills">Skills</a></li>
+					<li><a href="#contact">Contact</a></li>
 				</ul>
+				<div class="header-text">
+					<h1>Natalie Ronson</h1>
+					<div class="secondary-text">
+						<h2>Web Developer</h2>
+					</div>
+				</div>
 			</nav>
 		</div>
 	</header>
-	<section class="aboutMe">
-		<div class="wrapper">
-			<div class="aboutMe__image">
-				<img src="../images/NatalieRonson.jpg" alt="">
+	<section class="aboutMe" id="aboutMe">
+			<div class="wrapper">
+				<div class="aboutMe__image">
+					<img src="../images/natalieR.png" alt="">
+				</div>
+				<div class="aboutMe__bio">
+					<h2>About me</h2>
+					<p>Hi, I'm Natalie, a front-end web developer based in Toronto. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, impedit, reprehenderit nesciunt doloremque, illo obcaecati facere perferendis ex distinctio laboriosam asperiores atque minima nihil cupiditate nobis exercitationem adipisci alias maiores!</p>
+				</div>
 			</div>
-			<div class="aboutMe__bio">
-				<h2>About me</h2>
-				<p>Information about me</p>
-			</div>
-		</div>
 	</section>
-	<section class="skills">
-		<div class="wrapper">
-			<h2>Skills</h2>
-			<div class="skills__skill">
-				<div class="skills__skill--wrapper">
-					<div class="skills__icon">
-						<i class="devicon-html5-plain"></i>
-					</div>
-					<p>HTML5</p>
-				</div>
-			</div>
-			<div class="skills__skill">
-				<div class="skills__skill--wrapper">
-					<div class="skills__icon">
-						<i class="devicon-javascript-plain"></i>
-					</div>
-					<p>JavaScript</p>
-				</div>
-			</div>
-			<div class="skills__skill">
-				<div class="skills__skill--wrapper">
-					<div class="skills__icon">
-						<i class="devicon-css3-plain"></i>
-					</div>
-					<p>CSS3</p>
-				</div>
-			</div>
-			<div class="skills__skill">
-				<div class="skills__skill--wrapper">
-					<div class="skills__icon">
-						<i class="devicon-jquery-plain"></i>
-					</div>
-					<p>jQuery</p>
-				</div>
-			</div>
-			<div class="skills__skill">
-				<div class="skills__skill--wrapper">
-					<div class="skills__icon">
-						<i class="devicon-sass-original"></i>
-					</div>
-					<p>Sass</p>
-				</div>
-			</div>
-			<div class="skills__skill">
-				<div class="skills__skill--wrapper">
-					<div class="skills__icon">
-						<i class="devicon-gulp-plain"></i>
-					</div>
-					<p>Gulp</p>
-				</div>
-			</div>
-			<div class="skills__skill">
-				<div class="skills__skill--wrapper">
-					<div class="skills__icon">
-						<i class="devicon-git-plain"></i>
-					</div>
-					<p>Git</p>
-				</div>
-			</div>
-			<div class="skills__skill">
-				<div class="skills__skill--wrapper">
-					<div class="skills__icon">
-						<i class="devicon-github-plain"></i>
-					</div>
-					<p>GitHub</p>
-				</div>
-			</div>
-			<div class="skills__skill">
-				<div class="skills__skill--wrapper">
-					<div class="skills__icon">
-		
-					</div>
-					<p>Firebase</p>
-				</div>
-			</div>
-			<div class="skills__skill">
-				<div class="skills__skill--wrapper">
-					<div class="skills__icon">
-						<i class="devicon-react-original"></i>
-					</div>
-					<p>React</p>
-				</div>
-			</div>
-		</div>
-	</section>
-	<section class="portfolio">
+	<img class="break" src="../images/lines.png" alt="">
+	<section class="portfolio" id="portfolio">
 		<div class="wrapper">
 			<h2>Portfolio</h2>
-			<div class="portfolio__item">
+			<div class="portfolio__item" data-aos="fade-up" data-aos-duration="500">
 				<div class="portfolio__image">
 					<img src="images/DidYouHearPreview.png" alt="">
 					<div class="portfolio__links">
-						<button><a href="" target="_blank">View Live</a></button>
+						<button>
+							<a href="" target="_blank">View Live</a>
+						</button>
 						<button>
 							<a href="https://github.com/natalieronson/music_event_app" target="_blank">GitHub</a>
 						</button>
@@ -136,24 +60,24 @@
 				</div>
 				<div class="portfolio__description">
 					<h3>Did You Hear?</h3>
-					<p class="portfolio__skills">
+					<!-- <p class="portfolio__skills">
 						<span>JavaScript</span>
 						<span>jQuery</span>
-						<span>ES6</span>
-						<span>Gulp</span>
-						<span>Git</span>
+						<span>API</span>
 						<span>HTML5</span>
-						<span>CSS3</span>
 						<span>Sass</span>
-					</p>
+					</p> -->
+					<p class="portfolio__skills"><span>JavaScript</span><span>jQuery</span><span>Sass</span><span>API</span>
 					<p>An app that connects users to the TicketMaster and Spotify APIs in order to preview songs from bands with upcoming shows</p>
 				</div>
 			</div>
-			<div class="portfolio__item">
+			<div class="portfolio__item" data-aos="fade-up" data-aos-duration="500">
 				<div class="portfolio__image">
 					<img src="images/BirdAppPreview.png" alt="">
 					<div class="portfolio__links">
-						<button><a href="" target="_blank">View Live</a></button>
+						<button>
+							<a href="" target="_blank">View Live</a>
+						</button>
 						<button>
 							<a href="https://github.com/natalieronson/bird-watching-app" target="_blank">GitHub</a>
 						</button>
@@ -164,21 +88,19 @@
 					<p class="portfolio__skills">
 						<span>React</span>
 						<span>JavaScript</span>
-						<span>ES6</span>
-						<span>Gulp</span>
-						<span>Git</span>
-						<span>HTML5</span>
-						<span>CSS3</span>
+						<span>Firebase</span>
 						<span>Sass</span>
 					</p>
 					<p>An app for bird watchers, it records and tracks birds you've seen</p>
 				</div>
 			</div>
-			<div class="portfolio__item">
+			<div class="portfolio__item" data-aos="fade-up" data-aos-duration="500">
 				<div class="portfolio__image">
 					<img src="images/HackedInPreview.png" alt="">
 					<div class="portfolio__links">
-						<button><a href="" target="_blank">View Live</a></button>
+						<button>
+							<a href="" target="_blank">View Live</a>
+						</button>
 						<button>
 							<a href="https://github.com/natalieronson/jobSearch" target="_blank">GitHub</a>
 						</button>
@@ -186,42 +108,158 @@
 				</div>
 				<div class="portfolio__description">
 					<h3>Job Application Portal</h3>
-					<p class="portfolio__skills"><span>React</span> <span>JavaScript</span> <span>ES6</span> <span>Gulp</span> <span>Git</span> <span>HTML5</span> <span>CSS3</span> <span>Sass</span> </p>
-					<p>Searches for front-end developer jobs in your area and allows you to keep a record of jobs applied for and save jobs you're interested in</p>
+					<p class="portfolio__skills">
+						<span>React</span>
+						<span>JavaScript</span>
+						<span>Firebase</span>
+						<span>Sass</span>
+						<span>API</span>
+					</p>
+					<p>Searches for front-end developer jobs in your area and allows you to keep a record of jobs applied for and save jobs
+						you're interested in</p>
 				</div>
 			</div>
 		</div>
 	</section>
-	<section class="contact">
+	<img class="break" src="../images/lines.png" alt="">
+	<section class="skills" id="skills" data-aos="fade-up" data-aos-duration="500">
 		<div class="wrapper">
-			<div class="contact__links">
-				<h2>Contact</h2>
-				<h3>Send me a message!</h3>
-				<p><span>Location:</span>Toronto, Ontario</p>
-				<p><span>Email:</span>hello@natalieronson.com</p>
-				<!-- <p><span><i class="fas fa-globe"></i></span>Toronto, Ontario</p>
-				<p><span><i class="far fa-envelope"></i></span>hello@natalieronson.com</p>	 -->
-				<ul>
-					<li>
-						<a href="https://twitter.com/nronson" target="_blank"><i class="fab fa-twitter"></i></a>
-					</li>
-					<li>
-						<a href="https://github.com/natalieronson" target="_blank"><i class="fab fa-github"></i></a>
-					</li>
-					<li>
-						<a href="https://www.linkedin.com/in/natalieronson/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-					</li>
-				</ul>
+			<h2>Skills</h2>
+			<div class="skills__skill">
+					<div class="skills__item">
+						<div class="skills__icon">
+							<i class="devicon-html5-plain"></i>
+						</div>
+					</div>
+					<p>HTML5</p>
+			</div>
+			<div class="skills__skill">
+				<div class="skills__item">
+					<div class="skills__icon">
+						<i class="devicon-javascript-plain"></i>
+					</div>
+				</div>
+				<p>JavaScript</p>
+			</div>
+			<div class="skills__skill">
+				<div class="skills__item">
+					<div class="skills__icon">
+						<i class="devicon-css3-plain"></i>
+					</div>
+				</div>
+				<p>CSS3</p>
+			</div>
+			<div class="skills__skill">
+				<div class="skills__item">
+					<div class="skills__icon">
+						<i class="devicon-jquery-plain"></i>
+					</div>
+				</div>
+				<p>jQuery</p>
+			</div>
+			<div class="skills__skill">
+				<div class="skills__item">
+					<div class="skills__icon">
+						<i class="devicon-sass-original"></i>
+					</div>
+				</div>
+				<p>Sass</p>
+			</div>
+			<div class="skills__skill">
+				<div class="skills__item">
+					<div class="skills__icon">
+						<i class="devicon-gulp-plain"></i>
+					</div>
+				</div>
+				<p>Gulp</p>
+			</div>
+			<div class="skills__skill">
+				<div class="skills__item">
+					<div class="skills__icon">
+						<i class="devicon-git-plain"></i>
+					</div>
+				</div>
+				<p>Git</p>
+			</div>
+			<div class="skills__skill">
+				<div class="skills__item">
+					<div class="skills__icon">
+						<i class="devicon-github-plain"></i>
+					</div>
+				</div>
+				<p>GitHub</p>
+			</div>
+			<div class="skills__skill">
+				<div class="skills__item">
+					<div class="skills__icon">
+						<svg height="70" viewBox="0 0 512 512" width="60" xmlns="http://www.w3.org/2000/svg">
+							<path d="M297 205.6l-36.3 33.8 -33.7-68 17.4-39.1c4.4-7.8 11.6-7.9 16 0L297 205.6z" class="svg__main" />
+							<path d="M336.8 153.9c6.5-6.2 13.2-4.1 14.9 4.7l35.3 205.4L269.9 434.2c-4.1 2.3-15 3.2-15 3.2s-9.9-1.2-13.7-3.3L124.9 365.7 336.8 153.9z"
+							 class="svg__main" />
+							<path d="M227 171.4L124.9 365.7l45.5-284c1.7-8.8 6.7-9.7 11.2-1.9L227 171.4z" class="svg__main" />
+						</svg>
+					</div>
+				</div>
+				<p>Firebase</p>
+			</div>
+			<div class="skills__skill">
+				<div class="skills__item">
+					<div class="skills__icon">
+						<i class="devicon-react-original"></i>
+					</div>
+				</div>
+				<p>React</p>
+			</div>
+
+			
+			
+		</div>
+	</section>	
+	<section class="contact" id="contact" data-aos="fade-up" data-aos-duration="700">
+		<div class="wrapper">
+			<div class="contact__info">
+				<!-- <h2>Contact</h2> -->
+				<h3>hello@natalieronson.com</h3>
+				<div class="contact__links">
+					<!-- <h3>Send me a message!</h3>  -->
+					<!-- <p><span>Location</span>Toronto, Ontario</p>
+					<p><span>Email</span>hello@natalieronson.com</p> -->
+					<!-- <p><span><i class="fas fa-globe"></i></span>Toronto, Ontario</p>
+					<p><span><i class="far fa-envelope"></i></span>hello@natalieronson.com</p>	 -->
+					<ul>
+						<li>
+							<a href="https://twitter.com/nronson" target="_blank"><i class="fab fa-twitter"></i></a>
+						</li>
+						<li>
+							<a href="https://github.com/natalieronson" target="_blank"><i class="fab fa-github"></i></a>
+						</li>
+						<li>
+							<a href="https://www.linkedin.com/in/natalieronson/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+						</li>
+					</ul>
+				</div>
 			</div>
 			<div class="contact__form">
-				<form action="">
+				<!-- <h2>Contact</h2>
+				<h3>Send me a message!</h3> -->
+				<!-- <form action="https://formspree.io/hello@natalieronson.com" method="POST">
 					<label for="name">Name</label>
-					<input type="text" id="name" placeholder="Name">
+					<input type="text" id="name" placeholder="Name" name="name">
 					<label for="email">Email</label>
-					<input type="text" id="email" placeholder="Email">
+					<input type="text" id="email" placeholder="Email" name"reply">
 					<label for="message">Message</label>
-					<textarea name="" id="message" placeholder="Message"></textarea>
+					<textarea name="" id="message" placeholder="Message" name="message"></textarea>
 					<button>Send!</button>
+				</form> -->
+
+				<form action="https://formspree.io/hello@natalieronson.com" method="POST">
+					<label for="name">Name</label>
+					<input type="text" name="name" placeholder="Name">
+					<label for="_replyto">Email</label>
+					<input type="email" name="_replyto" placeholder="Email">
+					<label for="message">Message</label>
+					<textarea name="message" placeholder="Message"></textarea>
+					<input type="submit" value="Send">
 				</form>
 			</div>
 		</div>
@@ -235,8 +273,11 @@
 			</div>
 		</div>
 	</footer>
-
 	<script src='https://code.jquery.com/jquery-3.2.1.min.js' integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4='
-	 crossorigin='anonymous'></script>
+	crossorigin='anonymous'></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-smooth-scroll/2.1.2/jquery.smooth-scroll.min.js"></script>
+	<script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+	<script src="scripts/portfolio.js"></script>
 </body>
 </html>

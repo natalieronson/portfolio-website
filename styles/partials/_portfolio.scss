@@ -8,7 +8,7 @@
 .portfolio__item {
     @include flexRow;
     justify-content: space-between;
-    margin-bottom: 100px;
+    margin-bottom: 80px;
     justify-content: space-between;
 }
 
@@ -55,6 +55,11 @@
         margin: 10px;
         font-size: 12px;
         box-shadow: 1px 1px 5px grey;
+        // transition: all 0.3s ease;
+        &:hover, &:focus {
+            transform: perspective(20px) translateZ(0);
+            backface-visibility: hidden;
+        }
         a {
             color: $tertiary;
         }
@@ -86,5 +91,28 @@
     span:first-of-type {
         border-left: 2px solid $accent;
         padding-left: 10px;
+    }
+}
+
+@media (max-width: 730px) {
+    .portfolio__item {
+        flex-direction: column;
+        margin-bottom: 50px;
+    }
+    .portfolio__image {
+        height: 300px;
+        width: 300px;
+        align-self: center;
+        margin-top: 20px;
+    }
+    .portfolio__description {
+        order: -1;
+    }
+}
+
+@media (max-width: 380px) {
+    .portfolio__image {
+        height: 250px;
+        width: 250px;
     }
 }

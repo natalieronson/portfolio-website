@@ -5,8 +5,10 @@
 }
 
 .aboutMe .wrapper {
-    min-height: 90vh;
+    // min-height: 60vh;
     @include flexRow;
+    // margin-top: 500px;
+    // margin-bottom: 100px;
     justify-content: center;
     align-items: center;
     .aboutMe__image {
@@ -17,6 +19,9 @@
     }
     .aboutMe__bio {
         flex-basis: 50%;
+        p {
+            font-size: 15px;
+        }
     }
 }
 .aboutMe__image img {
@@ -31,5 +36,25 @@
     align-self: center;
 }
 
+@media (max-width: 900px) {
+    .aboutMe .wrapper {
+        flex-direction: column;
+        .aboutMe__image {
+            padding-top: 100px;
+            flex-basis: 100%;
+        }
+        .aboutMe__bio {
+            margin-bottom: 50px;
+            flex-basis: 100%;
+        }
+    }
+}
 
-
+@media (max-width: 335px) {
+    .aboutMe .wrapper {
+        .aboutMe__image img {
+            height: 200px;
+            width: 200px;
+        }
+    }
+}

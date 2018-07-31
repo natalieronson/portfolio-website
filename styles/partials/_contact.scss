@@ -22,6 +22,7 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
             font-size: 20px;
             align-self: flex-start;
             margin-bottom: 40px;
+            font-weight: 400;
         }
         p {
             font-weight: 300;
@@ -43,7 +44,7 @@ form {
         margin-bottom: 20px;
         border-radius: 1%;
         border: 1px solid white;
-        background: rgba(15, 15, 15, 0.3);
+        background: rgba(18, 27, 51, 0.5);
         color: white;
         font-family: $open-sans;
         font-size: 15px;
@@ -62,6 +63,10 @@ form {
         background: $accent;
         align-self: flex-end;
         padding: 0;
+        &:hover {
+            transform: perspective(20px) translateZ(0);
+            backface-visibility: hidden;
+        }
     }
     label {
        display: none;
@@ -79,6 +84,10 @@ form {
         li {
             a {
                 color: $tertiary;
+                transition: all 0.5s ease;
+                &:hover {
+                    color: $accent;
+                }
             }
             margin-right: 20px;
             font-size: 25px;
@@ -122,5 +131,25 @@ form {
     margin: 40px 0 10px 0;
     h3 {
         font-weight: 600;
+    }
+}
+
+@media (max-width: 765px) {
+    .contact__info {
+        flex-direction: column;
+        align-items: center;
+    }
+    .contact .wrapper h3 {
+        align-self: center;
+        margin-bottom: 15px;
+    }
+}
+
+@media (max-width: 420px) {
+    .contact__form {
+        width: 100%;
+    }
+    .contact .wrapper h3 {
+        font-size: 15px;
     }
 }

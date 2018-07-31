@@ -8,29 +8,47 @@
 	<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
 	<link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+	<link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16"
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700|Open+Sans:300,400,600,700" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Catamaran" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700i,900i" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Catamaran:300,400" rel="stylesheet">
 	<link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>	
-	<header class="headerTwo">
+
+	<nav>
+		<ul class="nav__links">
+			<li class="dropdown">
+				<i class="fa fa-bars" aria-hidden="true"></i>
+			</li>
+			<li class="hideLink">
+				<a href="#aboutMe" class="about__button displayMenu">About</a>
+			</li>
+			<li class="hideLink">
+				<a href="#portfolio" class="displayMenu">Portfolio</a>
+			</li>
+			<li class="hideLink">
+				<a href="#skills" class="displayMenu">Skills</a>
+			</li>
+			<li class="hideLink">
+				<a href="#contact" class="displayMenu">Contact</a>
+			</li>
+		</ul>
+	</nav>
+
+	<header class="header">
 		<div class="wrapper">
-			<nav>
-				<ul class="nav__links">
-					<li><a href="#aboutMe" class="about__button">About</a></li>
-					<li><a href="#portfolio">Portfolio</a></li>
-					<li><a href="#skills">Skills</a></li>
-					<li><a href="#contact">Contact</a></li>
-				</ul>
+			
 				<div class="header-text">
 					<h1>Natalie Ronson</h1>
+					<h2>Web Developer</h2>
 					<div class="secondary-text">
-						<h2>Web Developer</h2>
 					</div>
 				</div>
-			</nav>
+		
 		</div>
 	</header>
+
 	<section class="aboutMe" id="aboutMe">
 			<div class="wrapper">
 				<div class="aboutMe__image">
@@ -38,12 +56,13 @@
 				</div>
 				<div class="aboutMe__bio">
 					<h2>About me</h2>
-					<p>Hi, I'm Natalie, a front-end web developer based in Toronto. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, impedit, reprehenderit nesciunt doloremque, illo obcaecati facere perferendis ex distinctio laboriosam asperiores atque minima nihil cupiditate nobis exercitationem adipisci alias maiores!</p>
+					<p>Hi, I'm Natalie, a front-end web developer based in Toronto. I'm passionate about continually learning and tackling new problems. I strive to write code that is clean and create websites that make for a great user experience.  <br><br> Check out some of my projects below!  
+					</p>
 				</div>
 			</div>
 	</section>
-	<img class="break" src="../images/lines.png" alt="">
-	<section class="portfolio" id="portfolio">
+	<img class="break" id="portfolio" src="../images/lines.png" alt="">
+	<section class="portfolio">
 		<div class="wrapper">
 			<h2>Portfolio</h2>
 			<div class="portfolio__item" data-aos="fade-up" data-aos-duration="500">
@@ -51,7 +70,7 @@
 					<img src="images/DidYouHearPreview.png" alt="">
 					<div class="portfolio__links">
 						<button>
-							<a href="" target="_blank">View Live</a>
+							<a href="https://ronsonismael.github.io/music_event_app/" target="_blank">View Live</a>
 						</button>
 						<button>
 							<a href="https://github.com/natalieronson/music_event_app" target="_blank">GitHub</a>
@@ -68,7 +87,7 @@
 						<span>Sass</span>
 					</p> -->
 					<p class="portfolio__skills"><span>JavaScript</span><span>jQuery</span><span>Sass</span><span>API</span>
-					<p>An app that connects users to the TicketMaster and Spotify APIs in order to preview songs from bands with upcoming shows</p>
+					<p>A paired programming creation that connects users to the TicketMaster and Spotify APIs in order to preview songs from bands with upcoming shows</p>
 				</div>
 			</div>
 			<div class="portfolio__item" data-aos="fade-up" data-aos-duration="500">
@@ -76,10 +95,10 @@
 					<img src="images/BirdAppPreview.png" alt="">
 					<div class="portfolio__links">
 						<button>
-							<a href="" target="_blank">View Live</a>
+							<a href="https://bird-app-f0c4d.firebaseapp.com/" target="_blank">View Live</a>
 						</button>
 						<button>
-							<a href="https://github.com/natalieronson/bird-watching-app" target="_blank">GitHub</a>
+							<a href="https://github.com/natalieronson/bird-watching" target="_blank">GitHub</a>
 						</button>
 					</div>
 				</div>
@@ -99,7 +118,7 @@
 					<img src="images/HackedInPreview.png" alt="">
 					<div class="portfolio__links">
 						<button>
-							<a href="" target="_blank">View Live</a>
+							<a href="https://hyjobsearchapp.firebaseapp.com/" target="_blank">View Live</a>
 						</button>
 						<button>
 							<a href="https://github.com/natalieronson/jobSearch" target="_blank">GitHub</a>
@@ -115,14 +134,13 @@
 						<span>Sass</span>
 						<span>API</span>
 					</p>
-					<p>Searches for front-end developer jobs in your area and allows you to keep a record of jobs applied for and save jobs
-						you're interested in</p>
+					<p>Searches for front-end developer postings in your area and allows you to keep a record of your applications and save jobs you're interested in for the future.</p>
 				</div>
 			</div>
 		</div>
 	</section>
-	<img class="break" src="../images/lines.png" alt="">
-	<section class="skills" id="skills" data-aos="fade-up" data-aos-duration="500">
+	<img class="break" id="skills" src="../images/lines.png" alt="">
+	<section class="skills" data-aos="fade-up" data-aos-duration="500">
 		<div class="wrapper">
 			<h2>Skills</h2>
 			<div class="skills__skill">
@@ -208,14 +226,14 @@
 						<i class="devicon-react-original"></i>
 					</div>
 				</div>
-				<p>React</p>
+				<p id="contact">React</p>
 			</div>
 
 			
 			
 		</div>
 	</section>	
-	<section class="contact" id="contact" data-aos="fade-up" data-aos-duration="700">
+	<section class="contact" data-aos="fade-up" data-aos-duration="700">
 		<div class="wrapper">
 			<div class="contact__info">
 				<!-- <h2>Contact</h2> -->
@@ -239,19 +257,7 @@
 					</ul>
 				</div>
 			</div>
-			<div class="contact__form">
-				<!-- <h2>Contact</h2>
-				<h3>Send me a message!</h3> -->
-				<!-- <form action="https://formspree.io/hello@natalieronson.com" method="POST">
-					<label for="name">Name</label>
-					<input type="text" id="name" placeholder="Name" name="name">
-					<label for="email">Email</label>
-					<input type="text" id="email" placeholder="Email" name"reply">
-					<label for="message">Message</label>
-					<textarea name="" id="message" placeholder="Message" name="message"></textarea>
-					<button>Send!</button>
-				</form> -->
-
+			<div class="contact__form" id="contact">
 				<form action="https://formspree.io/hello@natalieronson.com" method="POST">
 					<label for="name">Name</label>
 					<input type="text" name="name" placeholder="Name">
@@ -276,7 +282,7 @@
 	<script src='https://code.jquery.com/jquery-3.2.1.min.js' integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4='
 	crossorigin='anonymous'></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-smooth-scroll/2.1.2/jquery.smooth-scroll.min.js"></script>
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-smooth-scroll/2.1.2/jquery.smooth-scroll.min.js"></script> -->
 	<script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
 	<script src="scripts/portfolio.js"></script>
 </body>
